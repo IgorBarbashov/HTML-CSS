@@ -1,0 +1,59 @@
+/* значение width - это именно для контента */
+/* margin, padding и border прибавляются к width (причем во два раза для каждой стороны) */
+
+/* "вертикальные" отступы схлопываются (выбирается наибольший) */
+/* "горизонтальные" складываются (плюсуются больший с меньшим) */
+
+/* margin */
+/* если margin первого блочного элемента вылезает за верх родители */
+/* или margin последнего блочного элемента вылезает за низ родителя */
+/* то эти margin в стандартном модели опять же схлопываются */
+/* надо ставить display: inline-block */
+
+/* если для выставления элементов в ряд пользоваться display: inline-block */
+/* они начинают вести себя как текст, т.е. перенос строки в html воспринимается */
+/* как один пробел. чтобы это убрать надо сжимать html-код или использовать float */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.parent {
+    width: 500px;
+    margin: 50px auto 0;
+    padding: 40px;
+    background: #aaa;
+}
+
+.sizes {
+    background: #f90;
+    width: 100px;
+    height: 80px;
+    /* padding: 20px 10px; */
+    /* margin: 0 20px; */
+    border: 1px solid green;
+    display: inline-block;
+}
+
+/* .sizes:first-child {
+    float: left;
+    background: #ccc;
+}
+
+.sizes:nth-child(2) {
+    overflow: hidden;
+    /* clear: both; */
+} */
+
+/* .box1 {
+    margin-bottom: 100px;
+}
+
+.box2 {
+    margin-top: 80px;
+}
+
+.box3 {
+} */

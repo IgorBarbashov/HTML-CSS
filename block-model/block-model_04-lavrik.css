@@ -1,0 +1,43 @@
+/* размер элемента расчитывается по его 'нормальным' детям */
+/* если какие-то дочерние элементы 'убежали' из flow во float*/
+/* они не учитываются */
+
+/* как сделать высоту родительского элемента по всем элементам */
+/* 1. (реже) overflow: hidden; в родительском элементе */
+/* 2. (более часто) после последнего обтекаемого эелемента отменить обтекание clear:both */
+/* 3. более современный аналог п.2 - через .parent::after */
+/* 4. но самый продвинутый вариангт (библиотечный) - создать класс .clearfix */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.parent {
+    background: #eee;
+    /* overflow: hidden; */
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* .parent:after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.sizer {
+    background: #f90;
+    width: 100px;
+    height: 80px;
+    padding: 20px 10px;
+    margin: 0 20px;
+    border: 2px solid gray;
+    color: white;
+    float: left;
+}

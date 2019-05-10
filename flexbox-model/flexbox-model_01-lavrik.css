@@ -1,0 +1,46 @@
+/* как задаются размеры элементов */
+/* flex-grow: жадность к пустому месту */
+    /* свободное пространство распределеяется в пропорциях по этому значению */
+
+/* flex-shrink: сжимаемость элемента */
+
+/* flex-basis: желаемый размер, мб охраняемый */
+    /* auto - ширина элемента берется по его контенту */
+    /* если щзадан значением - меньше этого размера элемент не будет */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #ccc;
+}
+
+.wrapper {
+    max-width: 800px;
+    background: #999;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.parent {
+    margin: 0 -20px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.child {
+    background: #f90;
+    border: 2px solid green;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    /* базовый размер элемента */
+    flex-basis: 150px;
+    /* flex-grow: 1; */
+}
+
+.block2, .block5 {
+    flex-grow: 1;
+}

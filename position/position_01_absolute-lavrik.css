@@ -1,0 +1,49 @@
+/* position: absolute */
+/* 1. место под 'выдернутым' элементом НЕ резервируется, эелменты ниже 'подтягиваются' */
+/* 2. оси x,y начинаются в левом верхнем экрана и идут в правый нижний */
+/* 3. z-index идет на человека */
+
+/* схема: relative + absolute */
+/* чтобы оси совместить с родительски эллементом, задаем родителю position: relative; */
+/* в это случае точка начала будет именно на краю и  */
+/* bottom: 0 и top: 100 - это две разные вещи */
+/* относительно кагого родителя мы холтим позиционироваться - в том элемент мы его и кладем */
+/* так же в схеме 'relative-absolute' потомок берет относительноые размеры от родителя (например 100%)  */
+
+body {
+    margin-top: 100px;
+    background: #aaa;
+}
+
+#wrapper {
+    width: 400px;
+    height: 400px;
+    background: #777;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header {
+    width: 200px;
+    height: 200px;
+    background: #ff0;
+}
+
+#menu {
+    width: 100px;
+    height: 100px;
+    background: #00f;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    border-radius: 50%;
+}
+
+#footer {
+    width: 150px;
+    height: 150px;
+    background: #f90;
+    position: absolute;
+    bottom: -75px;
+    left: 325px;
+}

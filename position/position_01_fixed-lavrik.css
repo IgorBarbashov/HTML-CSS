@@ -1,0 +1,43 @@
+/* position: fixed - 'бегает за пользователем' */
+/* 1. место под 'выдернутым' элементом НЕ резервируется, эелменты ниже 'подтягиваются' */
+/* 2. оси x,y начинаются в левом верхнем экрана и идут в правый нижний */
+/* 3. z-index идет на человека */
+/* 4. обычно такие блоки должны быть наверху всего контента, поэтому z-index ему ставят большой */
+
+body {
+    margin-top: 100px;
+    background: #aaa;
+}
+
+#wrapper {
+    width: 400px;
+    height: 4000px;
+    background: #777;
+    margin: 0 auto;
+}
+
+#header {
+    width: 200px;
+    height: 200px;
+    background: #ff0;
+}
+
+#menu {
+    width: 100px;
+    height: 100px;
+    background: #00f;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#footer {
+    width: 150px;
+    height: 150px;
+    background: #f90;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}

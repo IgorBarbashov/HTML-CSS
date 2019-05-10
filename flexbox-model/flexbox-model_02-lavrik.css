@@ -1,0 +1,43 @@
+/* пример как сделать, чтобы элементы соскакивали не по одному */
+/* чтобы не создавать кучу оберток и чтобы элементы соскакивали не по одному */
+/* надо писать медиа-завпросы */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #ccc;
+}
+
+.wrapper {
+    max-width: 800px;
+    background: #999;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.parent {
+    margin: 0 -20px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pair {
+    border: brown 1px solid;
+    display: flex;
+    flex-basis: 400px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.child {
+    background: #f90;
+    border: 2px solid green;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    /* базовый размер элемента */
+    flex-basis: 150px;
+}

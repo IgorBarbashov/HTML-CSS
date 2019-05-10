@@ -1,0 +1,39 @@
+/* margin */
+/* боевой вариант - */
+/* поставить родительскомиу элементу из которого утекают margin overflow:hidden; */
+
+/* если margin первого блочного элемента вылезает за верх родители */
+/* или margin последнего блочного элемента вылезает за низ родителя */
+/* то эти margin в стандартном модели опять же схлопываются */
+/* надо ставить display: inline-block */
+/* еще варианты: border или overflow: hidden; у родительского элемента */
+
+/* есть ситуации когда overflow: hidden; не подходит - если нам сознательно надо */
+/* какой-то другой элемент вынести за пределы родительского */
+/* тогда используется еще один вариант - вместо margin дочернего элемента ставим */
+/* padding родительского */
+
+/* минус display: inline-block - он делает дочерний элемент inline */
+/* border - дурацкое решение */
+/* overflow: hidden - нормальное решение */
+/* padding вместо margin - если overflow не подходит */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.outer {
+    background: #eee;
+    /* border: 1px solid green; */
+    /* overflow: hidden; */
+    /* padding: 10px 0 ; */
+}
+
+.inner {
+    background: #f90;
+    color: white;
+    margin: 10px 0;
+    display: inline-block;
+}

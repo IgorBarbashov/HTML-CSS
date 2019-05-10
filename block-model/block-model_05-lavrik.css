@@ -1,0 +1,29 @@
+/* одинаковая высота колонок */
+/* используется flex */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #aaa;
+    display: flex;
+}
+
+.left {
+    flex: 0 1 100px;
+    margin-right: 2%;
+    padding: 2%;
+    background: #f5d781;
+}
+
+.center {
+    flex: 1;
+    padding: 2%;
+    background: #f58781;
+}

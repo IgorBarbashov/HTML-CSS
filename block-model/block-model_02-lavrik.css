@@ -1,0 +1,32 @@
+/* box-sizing */
+/* content-box: (margin + border + padding)*2 + width; */
+/* content-box: margin + border + padding увеличивают размер элемента, 'распрают его' */
+/* border-box: (margin)*2 + width; */
+/* border-box: padding и border будут расчитываться внутрь, т.е. уменьшать размер контента */
+/* padding-box: (paddin)*2 + width; */
+/* padding-box: margin и border будут расчитываться внутрь, т.е. уменьшать размер контента */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.parent {
+    width: 500px;
+    margin: 50px auto 0;
+    padding: 40px;
+    background: #aaa;
+    text-align: center;
+}
+
+.sizes {
+    background: #f90;
+    width: 100px;
+    height: 80px;
+    margin: 0 20px;
+    display: inline-block;
+    padding: 10px;
+    border: 5px green solid;
+    box-sizing: border-box;
+}

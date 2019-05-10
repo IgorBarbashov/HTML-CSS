@@ -1,0 +1,43 @@
+body, html, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 250px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    background-color: violet;
+}
+
+.menu {
+    height: 50px;
+    background-color: thistle;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content {
+    height: 100px;
+    background-color: wheat;
+}
+
+.footer {
+    height: 100px;
+    background-color: tomato;
+}
