@@ -1,0 +1,34 @@
+/* Анимированный фон для текста при помощи CSS */
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 220px;
+    color: #000;
+    background: url('effect_01_back.jpg') no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: gradient;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
