@@ -1,0 +1,62 @@
+<!-- https://cubic-bezier.com -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        .outdoor {
+            width: 100px;
+            height: 100px;
+            background: lawngreen;
+            position: relative;
+            transition: background-color 0.5s;
+        }
+
+        .indoor {
+            width: 0;
+            overflow: hidden;
+            height: 50px;
+            background:yellow;
+            position: absolute;
+            left: 100%;
+            transition: width 0.5s cubic-bezier(.1,1.6,.4,1.58), background-color 2s, box-shadow 2s 0.5s;
+        }
+        
+        .outdoor:hover {
+            background: green;
+        }
+
+        .outdoor:hover > .indoor {
+            width: 50px;
+            background: blue;
+            box-shadow: 2px 2px 50px 5px;
+        }
+
+        .outdoor-2 {
+            width: 150px;
+            height: 150px;
+            background: red;
+            margin-top: 50px;
+            transition: transform 1s;
+        }
+
+        .outdoor-2:hover {
+            transform: scale(2) skew(15deg, 15deg) translate(100px, 100px);
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="outdoor">
+        <div class="indoor"></div>
+    </div>
+
+    <div class="outdoor-2">
+    </div>
+</body>
+</html>

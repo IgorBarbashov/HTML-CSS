@@ -1,0 +1,33 @@
+<!-- https://daneden.github.io/animate.css/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: lawngreen;
+            animation: opa 1s infinite cubic-bezier(.23,-0.89,.61,1.94);
+            position: absolute;
+        }
+
+        @keyframes opa {
+            0% { left: 30px; }
+            50% { left: 500px; }
+            100% { left: 30px; }
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+        .box1, .box2, .box3, .box4 {
+            width: 100px;
+            height: 100px;
+            background: lawngreen;
+            margin-right: 20px;
+            float: left;
+            animation: opa 1s infinite paused;
+        }
+
+        .box1:hover, .box2:hover, .box3:hover, .box4:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes opa {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    </div>
+</body>
+</html>
