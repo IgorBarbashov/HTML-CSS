@@ -1,0 +1,25 @@
+article {
+    height: 300px;
+    width: 300px;
+    background-color: #4c4c4c ;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0;
+}
+
+h2 span {
+    background-color: magenta;
+    padding: 4px 8px;
+    border-radius: 15px;
+    background-image: linear-gradient(red, blue);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
